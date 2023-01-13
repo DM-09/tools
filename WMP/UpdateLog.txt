@@ -3,3 +3,4 @@ Author: DM-09
 
 -01/13/2023(KST)
  Create Page
+ fix some bug
