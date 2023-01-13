@@ -1,0 +1,182 @@
+<!Doctype html>
+<html lang="ko">
+ <head>
+  <meta charset = "utf-8">
+   <title>V.M.P Classic</title>
+ </head>
+ <body class='body'>
+   <div>
+     <div onclick='EnterURL()' id='URL'>🔗</div>
+     <div onclick='loop()' style='color:White;' id='loop'>🔁️: ✖</div>
+     <div onclick='volume()' style='color:White;' id='Volume'>🔊: 0.5</div>
+     <br>
+   </div>
+
+   <input type="button" onclick="ms()" id ='loop' value="   ⏪   ">
+   <input type="button" onclick="Playing_Pause()" id ='play' value="   ▶   " class='play'>
+   <input type="button" onclick="ps()" id ='loop' value="   ⏩   ">
+   <div id='time' class='txt' onclick='sh()'>00:00</div>  
+   <input type="range" value="0" min="0" max="1000" id='bar' onchange='onTime()' style='position:absolute;' class='bar'>
+   
+   <audio src="" id="audio"></audio>
+   
+   <style>
+    /* 스마트폰 */
+    @media ( min-width: 320px ) {
+     .body{
+        position: absolute; top: 50%; left: 30%; 
+        background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
+
+     .bar{ left:60px; bottom: -1px }
+     .txt {font-weight: bold; color:White;}
+    }
+
+    /* 태블릿 */
+    @media ( min-width: 700px ) {
+     .mainf{ width:70% }
+
+     .body{
+        position: absolute; top: 50%; left: 30%; 
+        background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
+
+     .bar{ left:80px; bottom:12px }
+     .txt {font-weight: bold; color:White;}
+    }
+
+
+    /* 컴퓨터 */
+    @media ( min-width: 1024px ) {
+
+     .body{
+        position: absolute; top: 50%; left: 44.5%; 
+        background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
+
+     .bar{ left:60px; bottom: -0px}
+     .txt {font-weight: bold; color:White;}
+    }
+   </style>
+   
+   <script>
+      var audio = document.getElementById("audio")
+      var is_playing = 0
+      var URL = ''
+
+      function EnterURL() {
+        var input = prompt("Enter the mp3 URL","");
+          if (input != null) {
+            URL = input
+            audio.src = URL;
+            audio.volume = 0.5
+          }
+      }
+
+      function sh() {
+        var input = prompt("Enter the point(ex. 12:20 ➡ 12 20)","");
+
+          if (input != null) {
+              var words = input.split(' ');
+
+              words[0] = Number(words[0]) * 60
+              words[1] = Number(words[1])
+
+              audio.currentTime = words[0] + words[1]
+          }
+      }
+
+      function Playing_Pause() {
+        if (URL == '') {
+          EnterURL();
+        } else {
+            var el = document.getElementById("play")
+
+            if (is_playing == 0) {
+              is_playing = 1
+              audio.play();
+              el.value = '  ⏸ '
+            } else {
+              is_playing = 0
+              audio.pause();
+              el.value = '  ▶  '
+          }
+        }
+      }
+
+      function volume(){
+        var el = document.getElementById("Volume")
+        var input = prompt("Enter the Volume value(0 ~ 1)","");
+
+        if (input != null) {
+          if (Number(input) <= 1 && Number(input) >= 0) {
+                audio.volume = Number(input)
+                el.setAttribute('value', '🔊: ' + input);
+          }
+        }
+      };
+
+      function loop() {
+        var el = document.getElementById("loop");
+        var bool = audio.loop;
+
+        if (bool == false) {
+          audio.loop = true;
+          el.innerHTML = "🔁️: ✔"
+        }
+        if (bool == true) {
+          audio.loop = false;
+          el.innerHTML = "🔁️: ✖"
+        }
+      };
+
+      function CheckPageURL() {
+          var link =  document.location.href;
+          var url = link.substr(36)
+
+          if (link != '') {
+            URL = url
+          } else {
+            EnterURL()
+          }
+      }
+
+      function ms() {
+        audio.currentTime = audio.currentTime - 10
+      }
+
+      function ps() {
+        audio.currentTime = audio.currentTime + 10
+      }
+
+      function onTime() {
+          var bar = document.getElementById("bar")
+          audio.currentTime = bar.value
+      }
+
+      function play_update(){
+        var bar = document.getElementById("bar")
+        var time = document.getElementById("time")
+        bar.max = audio.duration
+        bar.value = audio.currentTime
+
+        var ct = audio.currentTime
+
+        var sec = Math.floor(ct % 60);
+        var min = Math.floor(ct / 60);
+
+        if (Number(ct) > -1) {
+
+          if (Number(min) < 10) {
+           min = '0' + String(min)
+          } 
+
+          if (Number(sec) < 10) {
+           sec = '0' + String(sec)
+          }
+      } 
+
+        time.innerHTML = min + ':' + sec
+      }
+      CheckPageURL()
+      setInterval(play_update, 1000)
+   </script>
+ </body>
+</html>
