@@ -108,7 +108,7 @@
         if (input != null) {
           if (Number(input) <= 1 && Number(input) >= 0) {
                 audio.volume = Number(input)
-                el.setAttribute('value', '🔊: ' + input);
+                el.innerHTML = '🔊: ' + String(input)
           }
         }
       };
@@ -129,7 +129,7 @@
 
       function CheckPageURL() {
           var link =  document.location.href;
-          var url = link.substr(36)
+          var url = link.substr(35)
 
           if (link != '') {
             URL = url
