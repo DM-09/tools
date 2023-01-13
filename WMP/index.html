@@ -1,3 +1,4 @@
+
 <!Doctype html>
 <html lang="ko">
  <head>
@@ -8,26 +9,25 @@
    <div>
      <div onclick='EnterURL()' id='URL'>🔗</div>
      <div onclick='loop()' style='color:White;' id='loop'>🔁️: ✖</div>
-     <div onclick='volume()' style='color:White;' id='Volume'>🔊: 0.5</div>
+	 <div onclick='volume()' style='color:White;' id='Volume'>🔊: 0.5</div>
      <br>
    </div>
 
    <input type="button" onclick="ms()" id ='loop' value="   ⏪   ">
    <input type="button" onclick="Playing_Pause()" id ='play' value="   ▶   " class='play'>
    <input type="button" onclick="ps()" id ='loop' value="   ⏩   ">
-   <div id='time' class='txt' onclick='sh()'>00:00</div>  
-   <input type="range" value="0" min="0" max="1000" id='bar' onchange='onTime()' style='position:absolute;' class='bar'>
-   
+   <br><div id='time' class='txt' onclick='sh()'>00:00</div>
+   000<input type="range" value="0" min="0" max="1000" id='bar' onchange='onTime()'class='bar'>
    <audio src="" id="audio"></audio>
    
    <style>
     /* 스마트폰 */
     @media ( min-width: 320px ) {
      .body{
-        position: absolute; top: 50%; left: 30%; 
+        left: 50%; position: absolute; top: 50%; 
         background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
 
-     .bar{ left:60px; bottom: -1px }
+     .bar{ left: 100px; position: static; top: 10px }
      .txt {font-weight: bold; color:White;}
     }
 
@@ -36,7 +36,7 @@
      .mainf{ width:70% }
 
      .body{
-        position: absolute; top: 50%; left: 30%; 
+        position: absolute; top: 50%; left: 30%; float:left;
         background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
 
      .bar{ left:80px; bottom:12px }
@@ -48,7 +48,7 @@
     @media ( min-width: 1024px ) {
 
      .body{
-        position: absolute; top: 50%; left: 44.5%; 
+        position: absolute; top: 50%; left: 43.5%; float:left;
         background-image : url('https://user-images.githubusercontent.com/100419204/212030729-4afad13e-2f4c-4417-8a04-0a0a8552df8b.png')}
 
      .bar{ left:60px; bottom: -0px}
@@ -108,7 +108,7 @@
         if (input != null) {
           if (Number(input) <= 1 && Number(input) >= 0) {
                 audio.volume = Number(input)
-                el.innerHTML = '🔊: ' + String(input)
+                el.setAttribute('value', '🔊: ' + input);
           }
         }
       };
