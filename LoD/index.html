@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="en">
+ <head>
+  <meta charset = "utf-8">
+  <title>Light or Dark</title>
+ </head>
+ <body>
+   <center><div class='txt' id='text'></div></center>
+   
+   <style>
+     @media(prefers-color-scheme:light){
+        body{
+            background-color:white;
+        }
+
+        .txt {
+            color:black;
+            font-size:3em;
+       }
+    }
+     
+    @media(prefers-color-scheme:dark){
+        body{
+            background-color:black;
+        }
+
+        .txt {
+            color:white;
+            font-size:3em;
+        }
+    }
+   </style>
+   
+   <script>
+     function Check() {
+        var txt = document.querySelector("div#text")
+
+        if (window.getComputedStyle(txt).color == 'rgb(255, 255, 255)') {
+          txt.innerHTML = "<br>WOW It's Dark Mode"
+        } else if (window.getComputedStyle(txt).color == 'rgb(0, 0, 0)') {
+          txt.innerHTML = "<br>WOW It's Light Mode"
+        }
+     }
+
+    setInterval(Check, 400)
+   </script>
+ </body>
+</html>
