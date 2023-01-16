@@ -6,3 +6,4 @@ Tools is a site with tools that can be useful.
 
 ##
 - <a href="https://github.com/DM-09/tools/tree/main/WMP">1. Web Mp3 Player</a>(Beta)
+- <a href="https://github.com/DM-09/tools/tree/main/LoD">2. Light or Dark</a>
