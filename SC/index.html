@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>CS</title>
+    <script src="https://unpkg.com/hangul-js"></script>
+    <script src="./fun.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <style>
+      section{padding: 20px 0px;}
+    </style>
+    
+    <!-- template: https://github.com/e-/Hangul.js/blob/master/examples/index.html -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Character spammer / 문자 도배기</h1>
+      <p>It helps me to spam the text I want. (e.g. spamspamspamspamspam)</p>
+      <p>내가 원하는 문자를 도배할 수 있도록 도와줍니다. (예: 도배도배도배도배도배)</p>
+      <section>
+      <form>
+        <div class="form-group">
+          <input type="button" onclick="spam()" value="Copy | 복사">
+          <input type="button" id='cc' onclick="count()" value="spam count: 5 | 도배 횟수: 5">
+          <textarea class="form-control" id="input" placeholder="Enter the Character 문자를 써주세요"></textarea>
+        </div>
+      </form>
+      <form>
+      </section>
+    </div>
+  </body>
+</html>
