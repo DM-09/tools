@@ -7,5 +7,5 @@
 
 ## Update Log
 - #### 01/23/2023(KST)<br>
-       Create Page
-       Fix the Bug
+       1. Create Page
+       2. Fix the Bug
