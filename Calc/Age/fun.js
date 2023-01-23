@@ -22,11 +22,11 @@ function KorAgeCalc(BY, BM, BD) {
 function Basic() {
   var txt = document.querySelector("#input").value;
   var Day = txt.split('/');
-  document.querySelector("#output").innerHTML = AgeCalc(Day[2], Day[1], Day[2])
+  document.querySelector("#output").innerHTML = AgeCalc(Day[2], Day[0], Day[1])
 }
 
 function Kor() {
   var txt = document.querySelector("#input2").value;
   var Day = txt.split('/');
-  document.querySelector("#output2").innerHTML = KorAgeCalc(Day[2], Day[1], Day[2])
+  document.querySelector("#output2").innerHTML = KorAgeCalc(Day[2], Day[0], Day[1])
 }
