@@ -1,10 +1,10 @@
 function AgeCalc(BY, BM, BD) {
   var now = new Date();
-  var NT = [now.getFullYear(), now.getMonth(), now.getDate()]
+  var NT = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
   
   var age = Number(NT[0] - BY)
   
-  if (NT[1] >= BM || NT[2] >= BD) {
+  if (NT[1] >= BM && NT[2] >= BD) {
     return  age
   } else {
     return age - 1
@@ -13,7 +13,7 @@ function AgeCalc(BY, BM, BD) {
 
 function KorAgeCalc(BY, BM, BD) { 
   var now = new Date();
-  var NT = [now.getFullYear(), now.getMonth(), now.getDate()]
+  var NT = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
   
   var age = Number(NT[0] - BY) + 1
   return  age
