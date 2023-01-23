@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Age Calculator</title>
+    <script src="https://unpkg.com/hangul-js"></script>
+    <script src="./fun.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <style>
+      section{padding: 20px 0px;}
+    </style>
+    
+    <!-- template: https://github.com/e-/Hangul.js/blob/master/examples/index.html -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Age Calculator 나이 계산기</h1>
+      <p>It is a simple age calculator and also has a Korean age calculator.</p>
+      <p>간단한 나이 계산기이며 한국식 나이 계산기도 있습니다.</p>
+      <section>
+      <form>
+        <div class="form-group">
+          <label for="input">Basic 만 나이</label>
+          <input type="button" onclick="Basic()" value="Enter 입력">
+          <textarea class="form-control" id="input" placeholder="Enter your birthday(MM/DD/YYYY) 생일을 입력하세요(달/일/년) e.g.(예) 1/1/2000"></textarea>
+        </div>
+      </form>
+        <label for="output">Result 결과</label>
+      <div class="form-control" id="output">0</div>
+      </section>
+      <section>
+      <form>
+        <div class="form-group">
+          <label for="input">Korean Age 한국식 나이</label>
+          <input type="button" onclick="Kor()" value="Enter 입력">
+          <textarea class="form-control" id="input2" placeholder="Enter your birthday(MM/DD/YYYY) 생일을 입력하세요(달/일/년) e.g.(예) 1/1/2000"></textarea>
+        </div>
+      </form>
+      <label for="output">Result 결과</label>
+      <div class="form-control" id="output2">0</div>
+      </section>
+    </div>
+  </body>
+</html>
