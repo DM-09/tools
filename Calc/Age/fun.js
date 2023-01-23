@@ -29,4 +29,4 @@ function Kor() {
   var txt = document.querySelector("#input2").value;
   var Day = txt.split('/');
   document.querySelector("#output2").innerHTML = KorAgeCalc(Day[2], Day[0], Day[1])
-}
+};
