@@ -3,3 +3,9 @@
 <br>It is a simple age calculator and also has a Korean age calculator.<br>
 간단한 나이 계산기이며 한국식 나이 계산기도 있습니다.
 <br><a href="https://dm-09.github.io/tools/Calc/Age">[Visit Age Calc 사이트 방문하기]</a>
+
+
+## Update Log
+- #### 01/23/2023(KST)<br>
+       Create Page
+       Fix the Bug
