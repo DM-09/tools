@@ -9,3 +9,5 @@ Tools is a site with tools that can be useful.
 - <a href="https://github.com/DM-09/tools/tree/main/LoD">2. Light or Dark</a>
 - <a href="https://github.com/DM-09/tools/tree/main/CS">3. Character Spammer</a>
 
+- <a href="https://github.com/DM-09/tools/tree/main/Calc">4. Calculator</a><br>
+  ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/Age">4-1. Age Calc</a>
