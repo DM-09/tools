@@ -10,7 +10,6 @@ function AgeCalc(BY, BM, BD) {
     return age - 1
   }
 };
-
 function KorAgeCalc(BY, BM, BD) { 
   var now = new Date();
   var NT = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
@@ -21,12 +20,16 @@ function KorAgeCalc(BY, BM, BD) {
 
 function Basic() {
   var txt = document.querySelector("#input").value;
-  var Day = txt.split('/');
-  document.querySelector("#output").innerHTML = AgeCalc(Day[2], Day[0], Day[1])
-}
+  var kor = KorAgeCalc(txt, 1, 1)
+  var base = AgeCalc(txt, 1, 1)
+  document.querySelector("#output").innerHTML = `
+<b>Age(만 나이)</b><br>
+If your birthday is over(생일 지났으면)<br>
+${base}<br>
 
-function Kor() {
-  var txt = document.querySelector("#input2").value;
-  var Day = txt.split('/');
-  document.querySelector("#output2").innerHTML = KorAgeCalc(Day[2], Day[0], Day[1])
-};
+If not(생일 안 지났으면)<br>
+${base - 1}<br><br>
+
+<b>Korean age(한국식 나이)</b><br>
+${kor}`
+}
