@@ -45,6 +45,7 @@ function hash() {
   }
 };
 
+
 window.onload = function(){
   hash()
 };
