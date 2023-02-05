@@ -21,7 +21,7 @@ function calc() {
 function copy() {
   var d = document.querySelector("#Day").value
   var t = document.querySelector("#title").value
-  var c = String(window.location + '#d=' + d + 't=' + t)
+  var c = String('https://dm-09.github.io/tools/Calc/DDay/' + '#d=' + d + 't=' + t)
   var txt = document.querySelector("#title")
   
   txt.value = c
