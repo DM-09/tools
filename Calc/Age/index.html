@@ -20,25 +20,20 @@
       <section>
       <form>
         <div class="form-group">
-          <label for="input">Basic 만 나이</label>
           <input type="button" onclick="Basic()" value="Enter 입력">
-          <textarea class="form-control" id="input" placeholder="Enter your birthday(MM/DD/YYYY) 생일을 입력하세요(달/일/년) e.g.(예) 1/1/2000"></textarea>
+          <textarea class="form-control" id="input" placeholder="Enter your birth of year 태어난 해를 적으세요 e.g.(예) 2000"></textarea>
         </div>
       </form>
         <label for="output">Result 결과</label>
-      <div class="form-control" id="output">0</div>
+      <div class="form-control" id="output" style='height:180px'>
+        <b>Age(만 나이)</b><br>
+        If your birthday is over(생일 지났으면)<br>
+        0<br>
+        If not(생일 안 지났으면)<br>
+        0<br><br>
+        <b>Korean age(한국식 나이)</b><br>
+        0
+      </div>
       </section>
-      <section>
-      <form>
-        <div class="form-group">
-          <label for="input">Korean Age 한국식 나이</label>
-          <input type="button" onclick="Kor()" value="Enter 입력">
-          <textarea class="form-control" id="input2" placeholder="Enter your birthday(MM/DD/YYYY) 생일을 입력하세요(달/일/년) e.g.(예) 1/1/2000"></textarea>
-        </div>
-      </form>
-      <label for="output">Result 결과</label>
-      <div class="form-control" id="output2">0</div>
-      </section>
-    </div>
   </body>
 </html>
