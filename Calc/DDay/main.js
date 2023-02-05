@@ -37,7 +37,7 @@ function hash() {
       var tl = hash_code.search('t=')
   
       var date = hash_code.substring(dl, tl)
-      var title = hash_code.substring(tl+2)
+      var title = decodeURIComponent(hash_code.substring(tl+2))
       
       document.querySelector("#Day").value = date
       document.querySelector("#title").value = title
