@@ -21,7 +21,10 @@ function calc() {
 function copy() {
   var d = document.querySelector("#Day").value
   var t = document.querySelector("#title").value
-  var c = String('https://dm-09.github.io/tools/Calc/DDay/' + '#d=' + d + 't=' + t)
+  alert(t)
+  t = t.replace(' ', '+')
+  
+  var c = String('//https://dm-09.github.io/tools/Calc/DDay/' + '#d=' + d + 't=' + t)
   var txt = document.querySelector("#title")
   
   txt.value = c
@@ -39,12 +42,12 @@ function hash() {
       var date = hash_code.substring(dl, tl)
       var title = decodeURIComponent(hash_code.substring(tl+2))
       
+      title = title.replace('+', ' ');
       document.querySelector("#Day").value = date
       document.querySelector("#title").value = title
       document.getElementById("enter").click();
   }
 };
-
 
 window.onload = function(){
   hash()
