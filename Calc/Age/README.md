@@ -9,3 +9,7 @@
 - #### 01/23/2023(KST)<br>
        1. Create Page
        2. Really Fix the Bug
+- #### 02/05/2023(KST)<br>
+       1. faster calculate
+       
+       
