@@ -7,4 +7,4 @@
 It is a birthday calculator and creates a new D-Day for each new year.<br>
 생일 계산기이며 한 해가 나올 때마다 새로운 디데이가 생성됩니다.
 
-<a href="https://dm-09.github.io/tools/Calc/BD/">Visit D 방문하기</a>
+<a href="https://dm-09.github.io/tools/Calc/BD/">Visit BD 방문하기</a>
