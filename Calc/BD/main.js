@@ -55,8 +55,8 @@ function hash() {
         if (t[i] == '+') {
            tt += ' '
         } else {
-		  tt += t[i]
-		}
+	   tt += t[i]
+	}
       }
       document.querySelector("#Day").value = date
       document.querySelector("#title").value = tt
