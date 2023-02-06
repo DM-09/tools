@@ -20,16 +20,24 @@ function calc() {
 };
 function copy() {
   var d = document.querySelector("#Day").value
-  var t = document.querySelector("#title").value
-  t = t.replace(' ', '+')
+  var tt = document.querySelector("#title").value
+  var t = ''
   
-  var c = String('https://dm-09.github.io/tools/Calc/DDay/' + '#d=' + d + 't=' + t)
+  for (var i=0; i < tt.length; i++) {
+    if (tt[i] == ' ') {
+      t += '+'
+    } else {
+      t += tt[i]
+    }
+  }
+  
+  var c = String(window.location + '#d=' + d + 't=' + t)
   var txt = document.querySelector("#title")
   
   txt.value = c
   txt.select();
   document.execCommand("Copy");
-  txt.value = t
+  txt.value = tt
 };
 
 function hash() {
@@ -39,11 +47,18 @@ function hash() {
       var tl = hash_code.search('t=')
   
       var date = hash_code.substring(dl, tl)
-      var title = decodeURIComponent(hash_code.substring(tl+2))
-      
-      title = title.replace('+', ' ');
+      var t = decodeURIComponent(hash_code.substring(tl+2))
+      var tt = ''
+	  
+      for (var i=0; i < t.length; i++) {
+        if (t[i] == '+') {
+           tt += ' '
+        } else {
+		  tt += t[i]
+		    }
+      }
       document.querySelector("#Day").value = date
-      document.querySelector("#title").value = title
+      document.querySelector("#title").value = tt
       document.getElementById("enter").click();
   }
 };
