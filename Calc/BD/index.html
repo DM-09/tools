@@ -1,0 +1,27 @@
+<!Doctype html>
+<html lang="ko">
+ <head>
+  <meta charset = "utf-8">
+  <title>BirthDay Calc</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   <script type='module' src='./main.js'></script>
+ </head>
+ <body>
+   <center>
+     <div class='t-size'>
+       <div class='b-br'></div>
+       <b>Birth Day Calculator 생일 계산기</b>
+     </div>
+     <div class='br'></div>
+     <textarea class="form-control" id="title" placeholder="Title 제목" style='width:200px'></textarea><br>
+     <input type="date" id="Day" class='day'><br>
+     <div class='b-br'></div>
+     <input class="btn" type="button" id='enter'
+       value="Enter 입력" onclick='calc()'>
+     <div class='b-br'></div><br>
+     <div id='d' class='t-size'></div><br><br>
+     <input class="btn" type="button"
+       value="Copy URL 주소 복사" onclick='copy()'>
+   </center>
+ </body>
+</html>
