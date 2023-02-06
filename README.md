@@ -12,3 +12,4 @@ Tools is a site with tools that can be useful.
 - <a href="https://github.com/DM-09/tools/tree/main/Calc">4. Calculator</a><br>
   ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/Age">4-1. Age Calc</a>
   ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/DDay">4-2. D-Day Calc</a>
+  ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/BD">4-3. Birth Day Calc</a>
