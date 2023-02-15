@@ -1,0 +1,99 @@
+<!Doctype html>
+<html lang="ko">
+ <head>
+  <meta charset = "utf-8">
+  <title>Leap Year Calc</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   <script type='module' src='./main.js'></script>
+ </head>
+ <body>
+   <center>
+     <div class='t-size'>
+       <div class='b-br'></div>
+       <b>Leap Year Calculator 윤년 계산기</b>
+     </div>
+     <div class='br'></div>
+     <span>Recent 최근</span>
+     <span id='bool' class='t-size'>　　　　　　　　　</span>
+     <span>come 다가올</span>
+     <div></div>
+     
+     <span class='t-size' id='before'></span>
+     
+     <textarea class="box" id="e" placeholder="Enter the Year 연도를 입력하세요." style='width:200px'></textarea>
+     
+     <span class='t-size' id='after'></span>
+     
+     <div class='b-br'></div>
+     <input class="btn" type="button" id='enter'
+       value="Enter 입력" onclick='calc()'>
+   </center>
+   <style>
+     body {
+        background-color: #4B4B4B;
+        color:white;
+    }
+     
+    .day {
+        font-size: 1.5em
+    }
+     
+    .t-size {
+        font-size: 1.3em
+    }
+     
+    .br {
+        height: 120px
+    }
+     
+    .box {
+        text-align : center;
+        font-size: 16px
+    }
+   </style>
+   
+   <script>
+     function CheckLeapYear(y) {
+      if (y % 4 == 0){
+        if (y % 100 != 0 || y % 400 == 0) {
+          return true
+        } else {
+          return false
+        }
+      } else {
+        return false
+      }
+    };
+    function Before_LeapYear(y) {
+      if (CheckLeapYear(y) == true) {
+        return Number(y) - 4
+      } else {
+        return Number(y) - (y % 4)
+      }
+    }
+    function After_LeapYear(y) {
+      if (CheckLeapYear(y) == true) {
+        return Number(y) + 4
+      } else {
+        return Number(y) + (4 - (y % 4))
+      }
+    }
+
+    function calc() {
+      var b = document.querySelector("#bool")
+      var a = document.querySelector("#after")
+      var be = document.querySelector("#before")
+      var y = document.querySelector("#e").value
+
+      if (CheckLeapYear(y)) {
+        b.innerHTML = '　　　　✔　　　　'
+      } else {
+        b.innerHTML = '　　　　✖　　　　'
+      }
+
+      be.innerHTML = Before_LeapYear(y)
+      a.innerHTML = After_LeapYear(y)
+    };
+   </script>
+ </body>
+</html>
