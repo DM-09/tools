@@ -4,4 +4,4 @@
 윤년인지 아닌지 알려주며 최근/다가올 윤년까지 알려줍니다.
 
 
-<br><a href="https://dm-09.github.io/tools/Calc/Age">[Visit LY 사이트 방문하기]</a>
+<br><a href="https://dm-09.github.io/tools/Calc/LY">[Visit LY 사이트 방문하기]</a>
