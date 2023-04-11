@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>한/영 변환기</title>
+    <script src="https://unpkg.com/hangul-js"></script>
+    <script src="./fun.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <style>
+      section{padding: 20px 0px;}
+    </style>
+    
+    <!-- template: https://github.com/e-/Hangul.js/blob/master/examples/index.html -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>한/영 변환기</h1>
+      <p>한글을 입력하면 영어 자판으로 친 효과를, 영어의 경우는 그 반대입니다.(예: 한글 ➡ gksrmf)</p>
+      <section>
+      <form>
+        <div class="form-group">
+          <label for="input">한글 ➡ 영어</label>
+          <input type="button" onclick="Eng()" value="변환하기">
+          <textarea class="form-control" id="input" placeholder="한글"></textarea>
+        </div>
+      </form>
+        <label for="output">변환 결과(한영)</label>
+      <div class="form-control" id="output">gksrmf</div>
+      </section>
+      <section>
+      <form>
+        <div class="form-group">
+          <label for="input">영어 ➡ 한글</label>
+          <input type="button" onclick="Kor()" value="변환하기">
+          <textarea class="form-control" id="input2" placeholder="gksrmf"></textarea>
+        </div>
+      </form>
+      <label for="output">변환 결과(영한)</label>
+      <div class="form-control" id="output2">한글</div>
+      </section>
+    </div>
+  </body>
+</html>
