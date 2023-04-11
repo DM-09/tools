@@ -14,3 +14,5 @@ Tools is a site with tools that can be useful.
   ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/DDay">4-2. D-Day Calc</a>
   ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/BD">4-3. Birth Day Calc</a>
   ###### <a href="https://github.com/DM-09/tools/tree/main/Calc/LY">4-4. Leap Year Calc</a>
+
+- <a href="https://github.com/DM-09/tools/tree/main/SC">5. Server Clock</a>
