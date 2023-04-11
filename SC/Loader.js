@@ -24,3 +24,4 @@ function ServerClock() {
   get = setInterval(function() {
      getTime()
   }, 999);
+}
