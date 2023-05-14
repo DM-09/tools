@@ -336,4 +336,4 @@ function Bcalc() {
   open.setAttribute('onClick', "window.open('https://dm-09.github.io/tools/Calc/BD/')")
 }
 
-language()
+    window.onload = language;
