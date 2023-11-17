@@ -1,0 +1,8 @@
+.body { background-color: white; color: black; }
+.input { background-color: white; color: black; }
+.view { width: 100vw; height: 30vh; }
+
+@media (prefers-color-scheme: dark) {
+  .body { background-color: black; color: white; }
+  .input { background-color: black !important; color: white !important; }
+}
