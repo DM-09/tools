@@ -3,7 +3,7 @@ function isPrime(n) {
   if (n <= 0) { return 3 }
   if (isNaN(n)) { return 4 }
   
-  for (var i = 2; i < n; i++) {
+  for (var i = 2; i < parseInt(Math.sqrt(2)) + 1; i++) {
     if (n % i == 0) { return 0 }
   }
   
