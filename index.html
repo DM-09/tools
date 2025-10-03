@@ -1,43 +1,47 @@
-<!Doctype html>
-<html lang="ko">
+<html>
   <head>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import -->
     <script src="https://unpkg.com/hangul-js"></script>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-    <title id='page-title'>DM's Web Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="all.js"></script>
-  </head>
-  <body style='background-color:#181A1B; color:white'>
-    <div class='container'>
-      <center>
-      <br>
-      <btn class='btn btn-secondary mb-2' id='CS' onClick='CS()'></btn>
-      <btn class='btn btn-secondary mb-2' id='LoD' onClick='LoD()'></btn>
-      <btn class='btn btn-secondary mb-2' id='SC' onClick='SC()'></btn>
-      <btn class='btn btn-secondary mb-2' id='KE' onClick='KE()'></btn>
-      <btn class='btn btn-secondary mb-2' id='CC' onClick='CC()'></btn>
-      <br><div>​</div>
-      <div id='box'>
-        
-      </div>
-      </center>
-    </div>
     <style>
-      @media(prefers-color-scheme:light){
-  .box {background-color:white;}
-}
+      .body { background-color: white; color: black; }
+      .body2 { background-color: black; color: white; }
 
-@media(prefers-color-scheme:dark){
-  .box {background-color:black;}
-}
-
-.txt {color:white}
-.txt2 {color:black}
+      @media (prefers-color-scheme: dark) {
+        .body { background-color: black; color: white; }
+        .body2 { background-color: white; color: black; }
+      }
     </style>
+  </head>
+  
+  <body class='body'>
+    <div class='container'>
+      <br>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="lds" onclick='ld_toggle()'>
+        <label class="form-check-label" for="lds" id='dl'>다크 모드</label>
+      </div>
+      
+      <div onClick='window.open("https://github.com/DM-09/tools/")'><i class="bi bi-github"></i> Github</div>
+      <div id='G2W'></div>
+      
+      <select class="form-select ld mt-4" onChange='select(parseInt(this.value))' id='toolset'>
+        <option value="0"selected>도구를 선택해주세요</option>
+        <option value="1">한/영 변환기</option>
+        <option value="2">도배기</option>
+        <option value="3">서버 시계</option>
+        <option value="4">계산기</option>
+        <option value="5">기타</option>
+      </select>
+      
+      <div id='tool_area' class='mt-2'>
+      <div>
+    </div>
   </body>
 </html>
